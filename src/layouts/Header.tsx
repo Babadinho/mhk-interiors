@@ -42,11 +42,11 @@ const Header = () => {
 
   const length = carouselContent.length - 1;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
-    }, 10000);
-  }, [activeIndex]);
+  //   useEffect(() => {
+  //     const interval = setInterval(() => {
+  //       setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+  //     }, 10000);
+  //   }, [activeIndex]);
 
   return (
     <section>
@@ -68,9 +68,9 @@ const Header = () => {
               />
               <div className='header_carousel_content'>
                 <h2 className='header_carousel_title'>{slide.title}</h2>
-                <h3 className='header_carousel_description'>
+                <h2 className='header_carousel_description'>
                   {slide.description}
-                </h3>
+                </h2>
                 {slide.button}
               </div>
             </div>
