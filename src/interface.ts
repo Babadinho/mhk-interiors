@@ -6,4 +6,12 @@ interface CarouselItem {
 }
 [];
 
+interface TestimonialItem {
+  title: string;
+  description: string;
+  author: string;
+}
+[];
+
 export interface Carousel extends Array<CarouselItem> {}
+export interface Testimonial extends Array<TestimonialItem> {}
