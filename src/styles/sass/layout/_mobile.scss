@@ -24,6 +24,12 @@
                 width: unset;
             }
         }
+
+        &_carousel {
+            &_description {
+                font-size: 1.2rem;
+            }
+        }
     }
         
 }
