@@ -42,11 +42,11 @@ const Header = () => {
 
   const length = carouselContent.length - 1;
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
-  //     }, 10000);
-  //   }, [activeIndex]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+    }, 10000);
+  }, [activeIndex]);
 
   return (
     <section>

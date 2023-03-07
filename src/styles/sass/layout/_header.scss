@@ -1,7 +1,7 @@
 .header {
     height: 100vh;
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
 
     &_hero-img{
         & img {
@@ -78,9 +78,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 9px 30px;
+            padding: 11px 30px;
             border: 1px solid $color-light;
-            border-radius: 20px;
+            border-radius: 25px;
 
             & a {
                 text-transform: uppercase;
@@ -88,7 +88,7 @@
                 color: $color-light;
 
                 & span {
-                    padding-right: 0.3rem;
+                    padding-right: 0.7rem;
                 }
             }
         }
@@ -115,6 +115,7 @@
             &-active {
                 padding: 15px 0;
                 height: 260px;
+                border-radius: 10px;
             }
 
             & a {
@@ -168,12 +169,11 @@
             @include display-flex;
             justify-content: center;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1rem;
             position: absolute;
             top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 10;
             text-align: center;
         }
         
@@ -189,11 +189,11 @@
             font-size: 1.7rem;
             font-weight: bold;
             text-transform: capitalize;
+            margin-bottom: 1rem
         }
 
         &_button {
             @include button;
-            width: 200px;
         }
 
         &_dots {
