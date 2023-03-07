@@ -1,0 +1,137 @@
+.header {
+    height: 100vh;
+    position: relative;
+
+    &_hero-img{
+        & img {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+        }
+    }
+
+    &_nav {
+        @include display-flex;
+        justify-content: space-between;
+        height: 81px;
+        width: 80vw;
+        border-bottom: 0.5px solid $color-light;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 30;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        font-weight: lighter;
+
+        & a {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &_left {
+            @include display-flex;
+            justify-content: space-between;
+            gap: 3.5rem;
+        }
+
+        &_right {
+            @include display-flex;
+            justify-content: space-between;
+            gap: 3.5rem;
+        }
+
+        &_socials {
+            & a {
+                padding-right: 0.5rem;
+                text-decoration: none;
+                color: $color-light;
+            }
+        }
+
+        &_menu_left {
+            display: flex;
+            gap: 2rem;
+            & a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-light;
+            }
+        }
+
+        &_menu_right {
+            display: flex;
+            gap: 2rem;
+            & a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-light;
+            }
+        }
+
+        &_button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 30px;
+            border: 1px solid $color-light;
+            border-radius: 20px;
+
+            & a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-light;
+
+                & span {
+                    padding-right: 0.3rem;
+                }
+            }
+        }
+
+        &_toggle_button {
+            display: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+        }
+
+        &_dropdown_menu {
+            @include display-flex;
+            flex-direction: column;
+            position: absolute;
+            right: 1rem;
+            top: 60px;
+            height: 0;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            &-active {
+                padding: 15px 0;
+                height: 260px;
+            }
+
+            & a {
+                padding: 0.7rem;
+                text-decoration: none;
+                color: $color-light;
+                text-transform: uppercase;
+            }
+            
+            &_button {
+                @include display-flex;
+                justify-content: center;
+                width: 100%;
+                padding: 10px 30px;
+                border: 1px solid $color-light;
+                border-radius: 20px;
+            }
+        }
+    }
+}

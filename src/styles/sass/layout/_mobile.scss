@@ -1,0 +1,40 @@
+@media (max-width: 992px) {
+    .header {  
+        &_nav {
+            &_menu_left {
+                display: none;
+            }
+            &_right {
+                display: none;
+            }
+
+            &_toggle_button {
+                display: block;
+            }
+        }
+    }
+        
+}
+
+@media (max-width: 576px) {
+    .header {  
+        &_nav {
+            &_dropdown_menu {
+                left: 1rem;
+                width: unset;
+            }
+        }
+    }
+        
+}
+
+@media (min-width: 992px) {
+    .header {  
+        &_nav {
+            &_dropdown_menu {
+                display: none;
+            }
+        }
+    }
+        
+}
