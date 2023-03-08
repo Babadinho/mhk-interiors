@@ -16,7 +16,6 @@ const Header = () => {
           order now
         </a>
       ),
-      image: Hero,
     },
     {
       title: 'design and order your new kitchen today',
@@ -26,7 +25,6 @@ const Header = () => {
           order now
         </a>
       ),
-      image: Hero2,
     },
     {
       title: 'design and order your new kitchen today',
@@ -36,14 +34,13 @@ const Header = () => {
           order now
         </a>
       ),
-      image: Hero,
     },
   ];
 
   const length = carouselContent.length - 1;
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    setInterval(() => {
       setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
     }, 10000);
   }, [activeIndex]);
@@ -52,6 +49,7 @@ const Header = () => {
     <section>
       <div className='header'>
         <div className='header_carousel_container'>
+          <img src={Hero} alt='hero-image' className='header_image' />
           {carouselContent.map((slide, index) => (
             <div
               key={index}
@@ -61,11 +59,6 @@ const Header = () => {
                   : 'header_carousel_inactive'
               }`}
             >
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className='header_carousel_image'
-              />
               <div className='header_carousel_content'>
                 <h2 className='header_carousel_title'>{slide.title}</h2>
                 <h2 className='header_carousel_description'>

@@ -136,6 +136,13 @@
         }
     }
 
+    &_image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+    }
+
 
     &_carousel_container {
         height: 100vh;
@@ -149,20 +156,17 @@
         height: 100vh;
         width: 100%;
         position: relative;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
 
         &_active {
             display: inline-block;
+            animation: slide-in 0.2s forwards;
+            -webkit-animation: slide-in 0.2s forwards;
         }
     
         &_inactive {
             display: none;
-        }
-
-        &_image {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            object-fit: cover;
         }
 
         &_content {
