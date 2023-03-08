@@ -46,7 +46,7 @@ const Header = () => {
       if (activeIndex === carouselContent.length) {
         setActiveIndex(1);
       }
-    }, 5000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
