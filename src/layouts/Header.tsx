@@ -4,10 +4,11 @@ import SliderDots from '../components/SliderDots';
 import { Carousel } from '../interface';
 
 const Header = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const carouselContent: Carousel = [
     {
+      id: 1,
       title: 'design and order your new kitchen today',
       description: 'bespoke & made to measure handmade kitchen design',
       button: (
@@ -17,6 +18,7 @@ const Header = () => {
       ),
     },
     {
+      id: 2,
       title: 'design and order your new kitchen today',
       description: 'bespoke & made to measure handmade kitchen design',
       button: (
@@ -26,6 +28,7 @@ const Header = () => {
       ),
     },
     {
+      id: 3,
       title: 'design and order your new kitchen today',
       description: 'bespoke & made to measure handmade kitchen design',
       button: (
@@ -36,12 +39,18 @@ const Header = () => {
     },
   ];
 
-  const length = carouselContent.length - 1;
-
   useEffect(() => {
-    setInterval(() => {
-      setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
-    }, 10000);
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex + 1);
+
+      if (activeIndex === carouselContent.length) {
+        setActiveIndex(1);
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, [activeIndex]);
 
   return (
@@ -49,11 +58,11 @@ const Header = () => {
       <div className='header'>
         <div className='header_carousel_container'>
           <img src={Hero} alt='hero-image' className='header_image' />
-          {carouselContent.map((slide, index) => (
+          {carouselContent.map((slide) => (
             <div
-              key={index}
+              key={slide.id}
               className={`${
-                index === activeIndex
+                slide.id === activeIndex
                   ? 'header_carousel header_carousel_active'
                   : 'header_carousel_inactive'
               }`}
@@ -72,7 +81,6 @@ const Header = () => {
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
           carouselContent={carouselContent}
-          onclick={(activeIndex: number) => setActiveIndex(activeIndex)}
         />
       </div>
     </section>

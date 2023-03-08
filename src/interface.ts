@@ -1,4 +1,5 @@
 interface CarouselItem {
+  id: number;
   title: string;
   description: string;
   button?: JSX.Element;
