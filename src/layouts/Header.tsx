@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 const Hero = require('../assets/images/hero2.png');
-const Hero2 = require('../assets/images/hero.png');
 import SliderDots from '../components/SliderDots';
 import { Carousel } from '../interface';
 
