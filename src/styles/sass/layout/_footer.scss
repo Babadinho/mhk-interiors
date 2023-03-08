@@ -1,0 +1,85 @@
+.footer {
+    height: auto;
+    width: 100%;
+    position: relative;
+    background: $color-dark;
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0 3rem 0;
+
+    &_image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+    }
+
+    &_heading {
+        @include display-flex;
+        gap: 0.7rem;
+        width: 80vw;
+        margin-bottom: 2rem;
+
+        &_border {
+            height: 0.01rem;
+            width: 100%;
+            background-color: $color-border;
+        }
+    }
+
+    &_items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5rem;
+        justify-content: center;
+        margin-bottom: 3.5rem;
+        z-index: 30;
+        max-width: 80vw;
+    }
+
+    &_item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        &_heading {
+            color: $color-light;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 1.4rem;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $color-text;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+
+            &:hover {
+                color: $color-light;
+            }
+        }
+
+        &_socials {
+            @include display-flex;
+            gap: 0.5rem;
+        }
+    }
+
+    &_copyright {
+        color: $color-text;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    &_bottom-border {
+        height: 0.01rem;
+        width: 100%;
+        background-color: $color-border;
+        width: 80vw;
+    }
+}

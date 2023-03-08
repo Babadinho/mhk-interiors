@@ -7,15 +7,6 @@
     }
 }
 
-@media (max-width: 680px) {
-    .gallery {
-        &_images {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1.3rem;
-        }
-    }
-}
-
 @media (max-width: 992px) {
     .header {  
         &_nav {
@@ -81,6 +72,45 @@
         }
     }
         
+}
+
+@media (max-width: 800px) {
+    .footer {
+        height: auto;
+        &_items {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        &_item {
+            &_heading {
+                font-size: 1.1rem;
+            }
+    
+            & a {
+                font-size: 0.8rem;
+            }
+    
+            &_socials {
+                & img {
+                    height: 35px;
+                }
+            }
+        }
+    
+        &_copyright {
+            padding: 0 2.5rem 0 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .gallery {
+        &_images {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.3rem;
+        }
+    }
 }
 
 @media (max-width: 576px) {

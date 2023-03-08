@@ -3,6 +3,7 @@ import Header from '../layouts/Header';
 import About from '../layouts/About';
 import Testimonials from '../layouts/Testimonials';
 import Gallery from '../layouts/Gallery';
+import Footer from '../layouts/Footer';
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <About />
       <Testimonials />
       <Gallery />
+      <Footer />
     </div>
   );
 };
