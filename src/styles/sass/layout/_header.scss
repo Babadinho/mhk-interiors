@@ -135,6 +135,10 @@
                 padding: 9px 30px;
                 border: 1px solid $color-light;
                 border-radius: 20px;
+    
+                    & span {
+                        padding-right: 0.3rem;
+                    }
             }
         }
     }
