@@ -193,10 +193,11 @@
 
         &_description {
             color: $color-light;
-            font-size: 1.7rem;
+            font-size: 2rem;
             font-weight: bold;
             text-transform: capitalize;
-            margin-bottom: 1rem
+            margin-bottom: 1rem;
+            max-width: 560px;
         }
 
         &_button {
