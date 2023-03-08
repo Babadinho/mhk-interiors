@@ -23,8 +23,7 @@
 
         &_body {
             width: 68%;
-            transform: translateX(-5%);
-            -webkit-transform: translateX(-5%);
+            
             &_active {
                 display: inline-block;
                 @include display-flex;

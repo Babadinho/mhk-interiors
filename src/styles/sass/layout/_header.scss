@@ -47,10 +47,13 @@
         }
 
         &_socials {
+            @include display-flex;
+            gap: 0.6rem;
+
             & a {
-                padding-right: 0.5rem;
                 text-decoration: none;
                 color: $color-light;
+                font-size: 16px;
             }
         }
 
