@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
       <div className='footer_copyright'>
         <span>
-          Copyright Online MTC Home Kitchens 2018 - All rights reserved. <br />
+          Copyright Online MTC Home Kitchens 2023 - All rights reserved. <br />
           Responsive website design, Development & Hosting by mtc.
         </span>
       </div>
