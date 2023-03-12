@@ -37,29 +37,25 @@ const Testimonials = () => {
 
   return (
     <section className='testimonials'>
-      <div className='testimonials_content'>
-        <div className='testimonials_content_heading'>
-          What Our Customers Say
-        </div>
+      <div className='testimonials__content'>
+        <div className='testimonials__heading'>What Our Customers Say</div>
         {testimonials.map((slide, index) => (
           <div
             key={index}
             className={`${
               index === activeIndex
-                ? 'testimonials_content_body testimonials_content_body-active'
-                : 'testimonials_content_body-inactive'
+                ? 'testimonials__body testimonials__body--active'
+                : 'testimonials__body--inactive'
             }`}
           >
-            <div className='testimonials_content_title'>{slide.title}</div>
-            <div className='testimonials_content_description'>
-              {slide.description}
-            </div>
-            <div className='testimonials_content_author'>{slide.author}</div>
+            <div className='testimonials__title'>{slide.title}</div>
+            <div className='testimonials__description'>{slide.description}</div>
+            <div className='testimonials__author'>{slide.author}</div>
           </div>
         ))}
 
         <img
-          className='testimonials_content_previous'
+          className='testimonials__previous'
           src={Previous}
           alt='previous'
           onClick={() =>
@@ -67,14 +63,14 @@ const Testimonials = () => {
           }
         />
         <img
-          className='testimonials_content_next'
+          className='testimonials__next'
           src={Next}
           alt='next'
           onClick={() =>
             setActiveIndex(activeIndex === length ? 0 : activeIndex + 1)
           }
         />
-        <a href='#' className='testimonials_content_button'>
+        <a href='#' className='testimonials__button'>
           frequently asked questions
         </a>
       </div>

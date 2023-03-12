@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 5rem 0 5rem 0;
 
-    &_heading {
+    &__heading {
         color: $color-dark;
         font-size: 1.8rem;
         font-weight: bold;
@@ -11,14 +11,14 @@
         margin-bottom: 2rem;
     }
 
-    &_images {
+    &__images {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
         margin-bottom: 2rem;
     }
 
-    &_image {
+    &__image {
         height: 310px;
         width: 310px;
         position: relative;
@@ -35,7 +35,7 @@
         }
     }
 
-    &_button {
+    &__button {
         @include button;
     }
 }

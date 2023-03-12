@@ -5,7 +5,7 @@
     @include display-flex;
     justify-content: center;
 
-    &_content {
+    &__content {
         @include display-flex;
         flex-direction: column;
         justify-content: center;
@@ -13,76 +13,76 @@
         gap: 1rem;
         width: 70%;
         position: relative;
+    }
+
+    &__heading {
+        color: $color-yellow;
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__body {
+        width: 68%;
+        transform: translateX(-5%);
+        -webkit-transform: translateX(-5%);
         
-        &_heading {
-            color: $color-yellow;
-            font-size: 0.8rem;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        &_body {
-            width: 68%;
-            transform: translateX(-5%);
-            -webkit-transform: translateX(-5%);
-            
-            &-active {
-                display: inline-block;
-                @include display-flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                animation: slide-in 0.5s forwards;
-                -webkit-animation: slide-in 0.5s forwards;
-            }
-        
-            &-inactive {
-                display: none;
-            }
-        }
-
-        &_title {
-            color: $color-title;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: capitalize;
-            margin-bottom: 1rem;
-        }
-
-        &_description {
-            color: $color-text;
-            max-width: 800px;
-            font-size: 0.8rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        &_author {
-            color: $color-text;
-            max-width: 800px;
-            font-size: 0.8rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        &_previous {
-            position: absolute;
-            top: 40%;
-            left: 0;
-            cursor: pointer;
-            height: 65px;
+        &--active {
+            display: inline-block;
+            @include display-flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            animation: slide-in 0.5s forwards;
+            -webkit-animation: slide-in 0.5s forwards;
         }
     
-        &_next {
-            position: absolute;
-            top: 40%;
-            right: 0;
-            cursor: pointer;
-            height: 65px;
+        &--inactive {
+            display: none;
         }
+    }
 
-        &_button{
-            @include button;
-        }
+    &__title {
+        color: $color-title;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        color: $color-text;
+        max-width: 800px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    &__author {
+        color: $color-text;
+        max-width: 800px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    &__previous {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        cursor: pointer;
+        height: 65px;
+    }
+
+    &__next {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        cursor: pointer;
+        height: 65px;
+    }
+
+    &__button{
+        @include button;
     }
 }

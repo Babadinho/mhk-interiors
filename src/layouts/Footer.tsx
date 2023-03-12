@@ -8,38 +8,38 @@ const Logo = require('../assets/images/logo.png');
 const Footer = () => {
   return (
     <section className='footer'>
-      <img src={FooterImage} alt='footer_image' className='footer_image' />
+      <img src={FooterImage} alt='footer_image' className='footer__image' />
       <div className='footer_heading'>
-        <span className='footer_heading_border'></span>
-        <a className='footer_heading_logo' href='/'>
+        <span className='footer__stroke'></span>
+        <a className='footer__logo' href='/'>
           <img src={Logo} alt='logo' />
         </a>
-        <span className='footer_heading_border'></span>
+        <span className='footer__stroke'></span>
       </div>
-      <div className='footer_items'>
-        <div className='footer_item'>
-          <h3 className='footer_item_heading'>about</h3>
+      <div className='footer__items'>
+        <div className='footer__item'>
+          <h3 className='footer__title'>about</h3>
           <a href='#'>shop</a>
           <a href='#'>plan my kitchen</a>
           <a href='#'>about us</a>
           <a href='#'>gallery</a>
         </div>
-        <div className='footer_item'>
-          <h3 className='footer_item_heading'>services</h3>
+        <div className='footer__item'>
+          <h3 className='footer__title'>services</h3>
           <a href='#'>faq</a>
           <a href='#'>contact</a>
           <a href='#'>how to buy</a>
           <a href='#'>downloads</a>
         </div>
-        <div className='footer_item'>
-          <h3 className='footer_item_heading'>info</h3>
+        <div className='footer__item'>
+          <h3 className='footer__title'>info</h3>
           <a href='#'>delivery</a>
           <a href='#'>terms</a>
           <a href='#'>privacy</a>
         </div>
-        <div className='footer_item'>
-          <h3 className='footer_item_heading'>follow</h3>
-          <div className='footer_item_socials'>
+        <div className='footer__item'>
+          <h3 className='footer__title'>follow</h3>
+          <div className='footer__socials'>
             <a href='#'>
               <img src={Facebook} alt='facebook' />
             </a>
@@ -52,13 +52,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='footer_copyright'>
+      <div className='footer__copyright'>
         <span>
           Copyright Online MTC Home Kitchens 2023 - All rights reserved. <br />
           Responsive website design, Development by Donald Iloekwe.
         </span>
       </div>
-      <span className='footer_bottom-border'></span>
+      <span className='footer__bottomStroke'></span>
     </section>
   );
 };

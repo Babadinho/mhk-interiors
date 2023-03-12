@@ -12,9 +12,9 @@ const Logo = require('../assets/images/logo.png');
 const Navbar = () => {
   const [toggelMobileNav, setToggelMobileNav] = useState(false);
   return (
-    <div className='header_nav'>
-      <div className='header_nav_left'>
-        <div className='header_nav_socials'>
+    <div className='header-nav'>
+      <div className='header-nav__left'>
+        <div className='header-nav__socials'>
           <a href='#'>
             <FaFacebookF />
           </a>
@@ -25,23 +25,23 @@ const Navbar = () => {
             <FaInstagram />
           </a>
         </div>
-        <div className='header_nav_menu_left'>
+        <div className='header-nav__menuLeft'>
           <a href='#'>shop</a>
           <a href='#'>plan my kitchen</a>
         </div>
       </div>
 
-      <a className='header_nav_logo' href='/'>
+      <a className='header-nav__logo' href='/'>
         <img src={Logo} alt='logo' />
       </a>
 
-      <div className='header_nav_right'>
-        <div className='header_nav_menu_right'>
+      <div className='header-nav__right'>
+        <div className='header-nav__menuRight'>
           <a href='#'>about us</a>
           <a href='#'>gallery</a>
         </div>
 
-        <div className='header_nav_button'>
+        <div className='header-nav__button'>
           <a href='#'>
             <span>my order</span>
             <FaShoppingCart />
@@ -50,15 +50,15 @@ const Navbar = () => {
       </div>
 
       <div
-        className='header_nav_toggle_button'
+        className='header-nav__toggleButton'
         onClick={() => setToggelMobileNav(!toggelMobileNav)}
       >
         {toggelMobileNav ? <AiOutlineClose /> : <FaBars />}
       </div>
 
       <div
-        className={`header_nav_dropdown_menu ${
-          toggelMobileNav && 'header_nav_dropdown_menu-active'
+        className={`header-nav__dropdown ${
+          toggelMobileNav && 'header-nav__dropdown--active'
         }`}
       >
         <a href='#'>shop</a>
@@ -66,7 +66,7 @@ const Navbar = () => {
         <a href='#'>about us</a>
         <a href='#'>gallery</a>
         <a href='#'>
-          <div className='header_nav_dropdown_menu_button'>
+          <div className='header-nav__dropdownButton'>
             <span>my order</span>
             <FaShoppingCart />
           </div>

@@ -4,7 +4,7 @@
     height: 660px;
     width: 100%;
 
-    &_image {
+    &__image {
         width: 50vw;
         height: 100%;
         & img {
@@ -14,7 +14,7 @@
         }
     }
 
-    &_content {
+    &__content {
         width: 50vw;
         height: 100%;
         padding: 0 4rem 0 4rem;
@@ -22,33 +22,33 @@
         flex-direction: column;
         justify-content: center;
         gap: 0.5rem;
+    }
 
-        &_heading {
-            color: $color-yellow;
-            font-size: 0.8rem;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
+    &__heading {
+        color: $color-yellow;
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
 
-        &_subheading {
-            color: $color-dark;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: capitalize;
-            margin-bottom: 0.6rem;
-        }
+    &__subheading {
+        color: $color-dark;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-bottom: 0.6rem;
+    }
 
-        &_description {
-            color: $color-text;
-            max-width: 800px;
-            font-size: 0.8rem;
-            font-weight: 400;
-            margin-bottom: 0.6rem;
-        }
+    &__description {
+        color: $color-text;
+        max-width: 800px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-bottom: 0.6rem;
+    }
 
-        &_button{
-            @include button;
-            width: 180px;
-        }
+    &__button{
+        @include button;
+        width: 180px;
     }
 }

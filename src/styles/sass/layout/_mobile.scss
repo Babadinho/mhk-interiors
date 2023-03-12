@@ -1,6 +1,6 @@
 @media (max-width: 1310px) {
     .gallery {
-        &_images {
+        &__images {
             grid-template-columns: repeat(2, 1fr);
             gap: 1.3rem;
         }
@@ -9,20 +9,20 @@
 
 @media (max-width: 1080px) {
     .header {  
-        &_nav {
-            &_menu_left {
+        &-nav {
+            &__menuLeft {
                 display: none;
             }
-            &_right {
+            &__right {
                 display: none;
             }
 
-            &_toggle_button {
+            &__toggleButton {
                 display: block;
                 z-index: 30;
             }
 
-            &_logo {
+            &__logo {
                 position: absolute;
                 margin-left: auto;
                 margin-right: auto;
@@ -32,8 +32,8 @@
             }
         }
 
-        &_carousel {
-            &_description {
+        &-carousel {
+            &__description {
                 width: 500px;
             }
         }
@@ -44,7 +44,7 @@
         justify-content: space-between;
         height: 750px;
 
-        &_image {
+        &__image {
             width: 100%;
             height: 380px;
             & img {
@@ -54,7 +54,7 @@
             }
         }
 
-        &_content {
+        &__content {
             width: 100%;
             height: 400px;
             padding: 0 4rem 0 4rem;
@@ -63,24 +63,24 @@
             justify-content: center;
             gap: 0.5rem;
             padding: 0 2rem 0 2rem;
+        }
 
-            &_heading {
-                font-size: 0.7rem;
-            }
-    
-            &_subheading {
-                font-size: 1.7rem;
-            }
-    
-            &_description {
-                font-size: 0.8rem;
-            }
+        &__heading {
+            font-size: 0.7rem;
+        }
+
+        &__subheading {
+            font-size: 1.7rem;
+        }
+
+        &__description {
+            font-size: 0.8rem;
         }
     }
 
     .testimonials {
         height: 500px;
-        &_content {
+        &__content {
             width: 90%;
             &_body {
                 width: 75%;
@@ -93,12 +93,12 @@
 @media (max-width: 800px) {
     .footer {
         height: auto;
-        &_items {
+        &__items {
             grid-template-columns: repeat(2, 1fr);
             gap: 3rem;
         }
 
-        &_item {
+        &__item {
             &_heading {
                 font-size: 1.1rem;
             }
@@ -106,15 +106,15 @@
             & a {
                 font-size: 0.8rem;
             }
-    
-            &_socials {
-                & img {
-                    height: 35px;
-                }
+        }
+
+        &__socials {
+            & img {
+                height: 35px;
             }
         }
     
-        &_copyright {
+        &__copyright {
             padding: 0 2.5rem 0 2.5rem;
         }
     }
@@ -122,7 +122,7 @@
 
 @media (max-width: 680px) {
     .gallery {
-        &_images {
+        &__images {
             grid-template-columns: repeat(1, 1fr);
             gap: 1.3rem;
         }
@@ -131,15 +131,15 @@
 
 @media (max-width: 576px) {
     .header {  
-        &_nav {
-            &_dropdown_menu {
+        &-nav {
+            &__dropdown {
                 left: 1rem;
                 width: unset;
             }
         }
 
-        &_carousel {
-            &_description {
+        &-carousel {
+            &__description {
                 font-size: 1.7rem;
                 width: 300px;
             }
@@ -147,35 +147,33 @@
     }
 
     .testimonials {
-        &_content {
-            &_title {
-                font-size: 1.1rem;
-            }
+        &__title {
+            font-size: 1.1rem;
+        }
+
+        &__description {
+            font-size: 0.75rem;
+        }
+
+        &__author {
+            font-size: 0.7rem;
+        }
+
+        &__previous {
+            height: 40px;
+        }
     
-            &_description {
-                font-size: 0.75rem;
-            }
-    
-            &_author {
-                font-size: 0.7rem;
-            }
-    
-            &_previous {
-                height: 40px;
-            }
-        
-            &_next {
-                height: 40px;
-            }
-    
-            &_button{
-                @include button;
-            }
+        &__next {
+            height: 40px;
+        }
+
+        &__button{
+            @include button;
         }
     }
 
     .gallery {
-        &_heading {
+        &__heading {
             font-size: 1.7rem;
         }
     }
@@ -184,8 +182,8 @@
 
 @media (min-width: 992px) {
     .header {  
-        &_nav {
-            &_dropdown_menu {
+        &-nav {
+            &__dropdown {
                 display: none;
             }
         }

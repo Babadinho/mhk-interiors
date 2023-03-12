@@ -2,14 +2,14 @@ import React from 'react';
 
 const SliderDots = ({ activeIndex, setActiveIndex, carouselContent }: any) => {
   return (
-    <div className='header_carousel_dots'>
+    <div className='header-carousel__dots'>
       {carouselContent.map((slide: any) => (
         <span
           key={slide.id}
           className={`${
             activeIndex === slide.id
-              ? 'header_carousel_dot header_carousel_dot-active'
-              : 'header_carousel_dot'
+              ? 'header-carousel__dot header-carousel__dot--active'
+              : 'header-carousel__dot'
           }`}
           onClick={() => {
             setActiveIndex(slide.id);

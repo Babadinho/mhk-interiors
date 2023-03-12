@@ -12,7 +12,7 @@ const Header = () => {
       title: 'design and order your new kitchen today',
       description: 'bespoke & made to measure handmade kitchen design',
       button: (
-        <a href='#' className='header_carousel_button'>
+        <a href='#' className='header-carousel__button'>
           order now
         </a>
       ),
@@ -22,7 +22,7 @@ const Header = () => {
       title: 'design and order your new kitchen today',
       description: 'bespoke & made to measure handmade kitchen design',
       button: (
-        <a href='#' className='header_carousel_button'>
+        <a href='#' className='header-carousel__button'>
           order now
         </a>
       ),
@@ -32,7 +32,7 @@ const Header = () => {
       title: 'design and order your new kitchen today',
       description: 'bespoke & made to measure handmade kitchen design',
       button: (
-        <a href='#' className='header_carousel_button'>
+        <a href='#' className='header-carousel__button'>
           order now
         </a>
       ),
@@ -56,20 +56,20 @@ const Header = () => {
   return (
     <section>
       <div className='header'>
-        <div className='header_carousel_container'>
-          <img src={Hero} alt='hero-image' className='header_image' />
+        <div className='header-carousel__container'>
+          <img src={Hero} alt='hero-image' className='header__image' />
           {carouselContent.map((slide) => (
             <div
               key={slide.id}
               className={`${
                 slide.id === activeIndex
-                  ? 'header_carousel header_carousel_active'
-                  : 'header_carousel_inactive'
+                  ? 'header-carousel header-carousel--active'
+                  : 'header-carousel--inactive'
               }`}
             >
-              <div className='header_carousel_content'>
-                <h2 className='header_carousel_title'>{slide.title}</h2>
-                <h2 className='header_carousel_description'>
+              <div className='header-carousel__content'>
+                <h2 className='header-carousel__title'>{slide.title}</h2>
+                <h2 className='header-carousel__description'>
                   {slide.description}
                 </h2>
                 {slide.button}

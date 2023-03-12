@@ -3,17 +3,7 @@
     position: relative;
     margin-bottom: 0.1rem;
 
-    &_hero-img{
-        & img {
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            object-fit: cover;
-        }
-    }
-
-    &_nav {
+    &-nav {
         @include display-flex;
         justify-content: space-between;
         height: 81px;
@@ -34,19 +24,19 @@
             }
         }
 
-        &_left {
+        &__left {
             @include display-flex;
             justify-content: space-between;
             gap: 3.5rem;
         }
 
-        &_right {
+        &__right {
             @include display-flex;
             justify-content: space-between;
             gap: 3.5rem;
         }
 
-        &_socials {
+        &__socials {
             @include display-flex;
             gap: 0.6rem;
 
@@ -57,7 +47,7 @@
             }
         }
 
-        &_menu_left {
+        &__menuLeft {
             display: flex;
             gap: 2rem;
             & a {
@@ -67,7 +57,7 @@
             }
         }
 
-        &_menu_right {
+        &__menuRight {
             display: flex;
             gap: 2rem;
             & a {
@@ -77,7 +67,7 @@
             }
         }
 
-        &_button {
+        &__button{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -96,13 +86,13 @@
             }
         }
 
-        &_toggle_button {
+        &__toggleButton {
             display: none;
             cursor: pointer;
             font-size: 1.3rem;
         }
 
-        &_dropdown_menu {
+        &__dropdown {
             @include display-flex;
             flex-direction: column;
             position: absolute;
@@ -115,7 +105,7 @@
             overflow: hidden;
             transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-            &-active {
+            &--active {
                 padding: 15px 0;
                 height: 260px;
                 border-radius: 10px;
@@ -128,23 +118,23 @@
                 font-weight: 600;
                 text-transform: uppercase;
             }
-            
-            &_button {
-                @include display-flex;
-                justify-content: center;
-                width: 100%;
-                padding: 9px 30px;
-                border: 1px solid $color-light;
-                border-radius: 20px;
-    
-                    & span {
-                        padding-right: 0.3rem;
-                    }
-            }
+        }
+
+        &__dropdownButton {
+            @include display-flex;
+            justify-content: center;
+            width: 100%;
+            padding: 9px 30px;
+            border: 1px solid $color-light;
+            border-radius: 20px;
+
+                & span {
+                    padding-right: 0.3rem;
+                }
         }
     }
 
-    &_image {
+    &__image {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -152,7 +142,7 @@
     }
 
 
-    &_carousel_container {
+    &-carousel__container {
         height: 100vh;
         width: 100%;
         position: relative;
@@ -160,24 +150,24 @@
         overflow: hidden;
     }
 
-    &_carousel {
+    &-carousel {
         height: 100%;
         width: 100%;
         position: relative;
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
 
-        &_active {
+        &--active {
             display: inline-block;
             animation: slide-in 0.5s forwards;
             -webkit-animation: slide-in 0.5s forwards;
         }
     
-        &_inactive {
+        &--inactive {
             display: none;
         }
 
-        &_content {
+        &__content {
             @include display-flex;
             justify-content: center;
             flex-direction: column;
@@ -189,14 +179,14 @@
             text-align: center;
         }
         
-        &_title {
+        &__title {
             color: $color-light;
             font-size: 0.8rem;
             font-weight: 400;
             text-transform: uppercase;
         }
 
-        &_description {
+        &__description {
             color: $color-light;
             font-size: 2rem;
             font-weight: bold;
@@ -205,11 +195,11 @@
             max-width: 560px;
         }
 
-        &_button {
+        &__button {
             @include button;
         }
 
-        &_dots {
+        &__dots {
             position: absolute;
             top: 85%;
             left: 50%;
@@ -217,7 +207,7 @@
             z-index: 200;
         }
 
-        &_dot {
+        &__dot {
             cursor: pointer;
             height: 0.2rem;
             width: 3rem;
@@ -225,7 +215,7 @@
             background-color: $color-light;
             display: inline-block;
 
-            &-active {
+            &--active {
                 background-color: $color-yellow;
             }
         }
