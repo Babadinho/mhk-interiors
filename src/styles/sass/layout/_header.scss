@@ -224,10 +224,10 @@
             margin: 0px 3px;
             background-color: $color-light;
             display: inline-block;
-        }
 
-        &_active-dot {
-            background-color: $color-yellow;
+            &-active {
+                background-color: $color-yellow;
+            }
         }
     }
 }

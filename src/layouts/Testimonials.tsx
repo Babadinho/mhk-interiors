@@ -46,8 +46,8 @@ const Testimonials = () => {
             key={index}
             className={`${
               index === activeIndex
-                ? 'testimonials_content_body testimonials_content_body_active'
-                : 'testimonials_content_body_inactive'
+                ? 'testimonials_content_body testimonials_content_body-active'
+                : 'testimonials_content_body-inactive'
             }`}
           >
             <div className='testimonials_content_title'>{slide.title}</div>

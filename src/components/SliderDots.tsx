@@ -8,7 +8,7 @@ const SliderDots = ({ activeIndex, setActiveIndex, carouselContent }: any) => {
           key={slide.id}
           className={`${
             activeIndex === slide.id
-              ? 'header_carousel_dot header_carousel_active-dot'
+              ? 'header_carousel_dot header_carousel_dot-active'
               : 'header_carousel_dot'
           }`}
           onClick={() => {

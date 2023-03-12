@@ -26,7 +26,7 @@
             transform: translateX(-5%);
             -webkit-transform: translateX(-5%);
             
-            &_active {
+            &-active {
                 display: inline-block;
                 @include display-flex;
                 flex-direction: column;
@@ -36,7 +36,7 @@
                 -webkit-animation: slide-in 0.5s forwards;
             }
         
-            &_inactive {
+            &-inactive {
                 display: none;
             }
         }
